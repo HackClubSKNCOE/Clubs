@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import {
+  ThemeProvider,
+  Button,
+  Card,
+  Box,
+  Container,
+  Text,
+  Heading,
+} from "theme-ui";
+import theme from "@hackclub/theme";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Box
+        sx={{
+          bg: "sheet",
+          color: "primary",
+          textAlign: "center",
+          py: 5,
+          mb: 4,
+        }}
+      >
+        <Heading variant="title">Hack Club List</Heading>
+        <Text sx={{ color: "text" }} variant="subtitle">
+          all the hack clubs from the world
+        </Text>
+      </Box>
+    </ThemeProvider>
   );
 }
 
