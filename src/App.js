@@ -10,25 +10,17 @@ import {
   Heading,
 } from "theme-ui";
 import theme from "@hackclub/theme";
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Section from './components/Section'
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Box
-        sx={{
-          bg: "sheet",
-          color: "primary",
-          textAlign: "center",
-          py: 5,
-          mb: 4,
-        }}
-      >
-        <Heading variant="title">Hack Club List</Heading>
-        <Text sx={{ color: "text" }} variant="subtitle">
-          all the hack clubs from the world
-        </Text>
-      </Box>
-    </ThemeProvider>
+    <div>
+      <Header/>
+      <Section></Section>
+      <Footer/>
+    </div>
   );
 }
 

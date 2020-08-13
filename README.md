@@ -6,7 +6,7 @@
 Use It To Find Clubs Near You!**
 
 
-**This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app),
 [Hack Club theme](https://theme.hackclub.com/) + React components for [Theme UI.](https://theme-ui.com/)**
 
 ## Available Scripts
