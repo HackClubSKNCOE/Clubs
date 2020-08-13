@@ -27,16 +27,18 @@ function Section() {
 }
 
 const clubs = (async) => {
-  //   const club = getClubs();
+     const club = getClubs();
 
-  //   club.then((data) => {
-  //     console.log(data);
-  //     lscache.set("club", data, 2000);
-  //   });
+   club.then((data) => {
+     console.log("selection")
+     console.log(data);
+     console.log(data[0].leaders);
+     lscache.set("club", data, 2000);
+   });
 
-  //   console.log(club.json());
-  //   lscache.set("club", club, 2000);
-  //   console.log(lscache.get("club"));
+    //  console.log(club.json());
+    //  lscache.set("club", club, 2000);
+    //  console.log(lscache.get("club"));
   return lscache.get("club");
 };
 var lol = clubs();
