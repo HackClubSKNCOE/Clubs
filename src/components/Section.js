@@ -6,12 +6,13 @@ import { ThemeProvider, Container } from "theme-ui";
 import theme from "@hackclub/theme";
 import Cards from "./Card";
 
-function Section() {
+function Section(props) {
+  console.log(props.search);
   return (
     <div>
       <ThemeProvider theme={theme}>
         <Container px={[3, null, 4]} mb={5}>
-          <Cards data={clubs()}></Cards>
+          <Cards search={props.search} data={clubs()}></Cards>
         </Container>
       </ThemeProvider>
     </div>
