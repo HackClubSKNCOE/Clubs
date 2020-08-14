@@ -1,20 +1,11 @@
 import React from "react";
 
-import {
-  ThemeProvider,
-  Button,
-  Card,
-  Box,
-  Container,
-  Text,
-  Heading,
-} from "theme-ui";
+import { ThemeProvider, Box, Text, Heading } from "theme-ui";
 import theme from "@hackclub/theme";
 
-
 function Header() {
-    return (
-      <div>
+  return (
+    <div>
       <ThemeProvider theme={theme}>
         <Box
           sx={{
@@ -31,9 +22,8 @@ function Header() {
           </Text>
         </Box>
       </ThemeProvider>
-    
-      </div>
-    );
-  }
-  
-  export default Header;
+    </div>
+  );
+}
+
+export default Header;
