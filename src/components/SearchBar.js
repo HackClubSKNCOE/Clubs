@@ -17,10 +17,10 @@ class SearchBar extends React.Component {
   sendSearchKeyword = (e) => {
     e.preventDefault();
     let keyword = e.target.elements.search.value || " ";
-    console.log(keyword);
+
     this.props.searchKeyword(keyword);
   };
-  // <form onSearch={this.sendSearchKeyword}>
+
   render() {
     return (
       <div>
@@ -53,7 +53,3 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
-// searchSpace=(event)=>{
-//     let keyword = event.target.value;
-//     this.setState({search:keyword})
-//   }
