@@ -17,6 +17,8 @@ class App extends React.Component {
       search: null,
       data: null,
       isLoading: true,
+      currentPage: 1,
+      postsPerPage: 24,
     };
   }
 
@@ -25,7 +27,7 @@ class App extends React.Component {
       const club = getClubs();
       club
         .then((data) => {
-          lscache.set("club", data, 10);
+          lscache.set("club", data, 0);
         })
         .then(() => {
           this.setState({ data: lscache.get("club"), isLoading: false });
@@ -41,6 +43,10 @@ class App extends React.Component {
     }
   };
 
+  paginate = (pageNumber) => {
+    this.setState(() => ({ currentPage: pageNumber }));
+  };
+
   render() {
     return (
       <div>
@@ -50,6 +56,9 @@ class App extends React.Component {
           <Section
             search={this.state.search}
             apiData={this.state.data}
+            currentPage={this.state.currentPage}
+            postsPerPage={this.state.postsPerPage}
+            paginate={this.paginate}
           ></Section>
         ) : (
           <Flex

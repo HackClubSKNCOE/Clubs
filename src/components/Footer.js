@@ -8,8 +8,10 @@ import {
   Heading,
   Link,
   Text,
+  Image,
 } from "theme-ui";
 import theme from "@hackclub/theme";
+import sknlogo from "../skn.png";
 
 const Footer = () => {
   return (
@@ -26,7 +28,7 @@ const Footer = () => {
           <Grid
             as="article"
             gap={[2, 4]}
-            columns={[2, 3, 4]}
+            columns={[2, null, 3]}
             sx={{
               px: 0,
               a: {
@@ -82,38 +84,39 @@ const Footer = () => {
               <Link href="https://hackclub.com/map/" children="Clubs Map" />
             </Box>
 
-            <Box sx={{ gridColumn: ["span 2", "span 1"] }}>
-              <Grid
-                columns={[8, 4]}
-                gap={2}
-                sx={{
-                  alignItems: "center",
-                  ml: -1,
-                  my: 3,
-                  maxWidth: [null, 192],
-                  svg: { fill: "currentColor", width: 32, height: 32 },
-                  a: {
-                    lineHeight: 0,
-                    mb: 0,
-                    transition:
-                      "transform .125s ease-in-out, color .125s ease-in-out",
-                    ":hover,:focus": { transform: "scale(1.125)" },
-                  },
-                }}
+            <Box mt={4} sx={{ gridColumn: ["span 2", "span 1"] }}>
+              <Link
+                href="http://skn.hackclub.com"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <div href="/slack" icon="slack-fill" target="_self" />
-                <div href="https://twitter.com/hackclub" icon="twitter" />
-                <div href="https://github.com/hackclub" icon="github" />
-                <div
-                  href="https://www.facebook.com/Hack-Club-741805665870458"
-                  icon="facebook"
+                <Image
+                  src={sknlogo}
+                  alt="Hack Club Logo"
+                  sx={{ width: [96, 128] }}
                 />
+              </Link>
 
-                <div href="mailto:team@hackclub.com" icon="email" />
-              </Grid>
-              <Heading as="h2" variant="subheadline" mb={3}>
-                Hack Club,SKNCOE
-              </Heading>
+              <p className="subtitle is-4 mt-1">
+                <a href="https://twitter.com/hackclubskn" className="mx-2">
+                  <i className="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/hackclubskncoe"
+                  className="mx-2"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/hack-club-skn"
+                  className="mx-2"
+                >
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+                <a className="mx-2" href="https://github.com/HackClubSKNCOE">
+                  <i className="fab fa-github"></i>
+                </a>
+              </p>
               <Text
                 as="span"
                 color="white"

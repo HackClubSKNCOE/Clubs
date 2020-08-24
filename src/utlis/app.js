@@ -2,17 +2,16 @@ const getClubs = async () => {
   return fetch("https://api2.hackclub.com/v0.1/Operations/Clubs")
     .then((resp) => resp.json())
     .then(function (data) {
-      // console.log(data);
-
       return data
         .filter(({ fields }) => {
-          return !fields.Dummy && fields["Address City"];
+          return (
+            !fields.Dummy &&
+            fields["Address City"] &&
+            fields["Leader Names"] &&
+            fields["Address Country"]
+          );
         })
         .map(({ id, fields }) => {
-          // if (fields.Dummy == 0) {
-          //   console.log(fields.Dummy);
-          // }
-
           return {
             id,
             clubName: fields.Name,
@@ -28,6 +27,19 @@ const getClubs = async () => {
       console.log(err);
       throw err;
     });
+};
+
+export const getSearchResults = (data, search) => {
+  const apiData = data.filter((info) => {
+    return (
+      info.clubName.toLowerCase().includes(search.toLowerCase()) ||
+      info.leaders.toString().toLowerCase().includes(search.toLowerCase()) ||
+      info.city.toString().toLowerCase().includes(search.toLowerCase()) ||
+      info.country.toString().toLowerCase().includes(search.toLowerCase())
+    );
+  });
+  search = "";
+  return apiData;
 };
 
 export default getClubs;

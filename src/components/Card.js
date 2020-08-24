@@ -1,25 +1,27 @@
 import React from "react";
 
-import { ThemeProvider, Card, Text, Grid } from "theme-ui";
+import { ThemeProvider, Card, Text, Grid, Container, Link } from "theme-ui";
 import theme from "@hackclub/theme";
 import Icon from "@hackclub/icons";
 
+import { getSearchResults } from "../utlis/app";
+
 function Cards(props) {
+  const currentPage = props.currentPage;
+  const postsPerPage = props.postsPerPage;
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  let pageNumbers = [];
+
   let apiData = props.data;
   let search = props.search;
-  if (search && search != " ") {
-    apiData = props.data.filter((info) =>
-      info.clubName
-        .trim()
-        .toLowerCase()
-        .split(" ")
-        .join("")
-        .includes(props.search.trim().toLowerCase().split(" ").join(""))
-    );
-
-    search = "";
+  if (search && search !== " ") {
+    apiData = getSearchResults(props.data, search);
   } else {
-    apiData = props.data;
+    apiData = props.data.slice(indexOfFirstPost, indexOfLastPost);
+    for (let i = 1; i <= Math.ceil(props.data.length / postsPerPage); i++) {
+      pageNumbers.push(i);
+    }
   }
 
   return (
@@ -49,12 +51,50 @@ function Cards(props) {
                     <br />
                     {info.leaders ? `${info.leaders} ` : "Hack Clubber "}{" "}
                   </Text>
-
-                  <Text variant="caption">{info.slackID}</Text>
+                  <br />
+                  {info.slackID ? (
+                    <Text variant="caption" sx={{ color: "dark" }}>
+                      <Link
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        color="red"
+                        sx={{ color: "dark" }}
+                        href={
+                          "https://app.slack.com/client/T0266FRGM/" +
+                          info.slackID
+                        }
+                      >
+                        <Icon glyph="slack-fill" size={36}></Icon>
+                      </Link>
+                      <br />
+                    </Text>
+                  ) : (
+                    " "
+                  )}
                 </Card>
               );
             })}
         </Grid>
+        <Container mt={5}>
+          <nav
+            className="pagination is-centered"
+            role="navigation"
+            aria-label="pagination"
+          >
+            <ul className="pagination-list">
+              {pageNumbers.map((number) => (
+                <li key={number}>
+                  <button
+                    onClick={() => props.paginate(number)}
+                    className="pagination-link"
+                  >
+                    {number}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </Container>
       </ThemeProvider>
     </div>
   );

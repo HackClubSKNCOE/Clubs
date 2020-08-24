@@ -1,9 +1,8 @@
 import React from "react";
-import lscache from "lscache";
-import getClubs from "../utlis/app";
 
 import { ThemeProvider, Container, Spinner } from "theme-ui";
 import theme from "@hackclub/theme";
+
 import Cards from "./Card";
 
 function Section(props) {
@@ -12,7 +11,13 @@ function Section(props) {
       <ThemeProvider theme={theme}>
         <Container px={[3, null, 4]} mb={5}>
           {props.apiData ? (
-            <Cards search={props.search} data={props.apiData}></Cards>
+            <Cards
+              currentPage={props.currentPage}
+              postsPerPage={props.postsPerPage}
+              search={props.search}
+              data={props.apiData}
+              paginate={props.paginate}
+            ></Cards>
           ) : (
             <Spinner />
           )}

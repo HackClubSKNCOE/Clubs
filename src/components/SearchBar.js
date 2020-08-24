@@ -1,15 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-import {
-  ThemeProvider,
-  Container,
-  Input,
-  Card,
-  Grid,
-  Label,
-  IconButton,
-  Flex,
-} from "theme-ui";
+import { ThemeProvider, Container, Input, Card, Grid, Flex } from "theme-ui";
 import theme from "@hackclub/theme";
 import Icon from "@hackclub/icons";
 
@@ -40,9 +31,6 @@ class SearchBar extends React.Component {
                     ></Input>
                   </Flex>
                 </form>
-                <div>
-                  <Icon glyph="filter" size={32} />
-                </div>
               </Grid>
             </Card>
           </Container>
