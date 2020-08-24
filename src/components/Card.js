@@ -1,6 +1,14 @@
 import React from "react";
 
-import { ThemeProvider, Card, Text, Grid, Container, Link } from "theme-ui";
+import {
+  ThemeProvider,
+  Card,
+  Text,
+  Grid,
+  Container,
+  Link,
+  Button,
+} from "theme-ui";
 import theme from "@hackclub/theme";
 import Icon from "@hackclub/icons";
 
@@ -84,12 +92,13 @@ function Cards(props) {
             <ul className="pagination-list">
               {pageNumbers.map((number) => (
                 <li key={number}>
-                  <button
+                  <Button
+                    variant="outline"
                     onClick={() => props.paginate(number)}
                     className="pagination-link"
                   >
                     {number}
-                  </button>
+                  </Button>
                 </li>
               ))}
             </ul>
