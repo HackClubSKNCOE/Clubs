@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/Clubs/static/js/main.2c3e88f0.chunk.js",
-    "main.js.map": "/Clubs/static/js/main.2c3e88f0.chunk.js.map",
+    "main.js": "/Clubs/static/js/main.e312745f.chunk.js",
+    "main.js.map": "/Clubs/static/js/main.e312745f.chunk.js.map",
     "runtime-main.js": "/Clubs/static/js/runtime-main.72eb142b.js",
     "runtime-main.js.map": "/Clubs/static/js/runtime-main.72eb142b.js.map",
-    "static/js/2.a2ec5fc2.chunk.js": "/Clubs/static/js/2.a2ec5fc2.chunk.js",
-    "static/js/2.a2ec5fc2.chunk.js.map": "/Clubs/static/js/2.a2ec5fc2.chunk.js.map",
+    "static/js/2.55422d17.chunk.js": "/Clubs/static/js/2.55422d17.chunk.js",
+    "static/js/2.55422d17.chunk.js.map": "/Clubs/static/js/2.55422d17.chunk.js.map",
     "index.html": "/Clubs/index.html",
-    "precache-manifest.889473a494ac4a14f5ad3579b7d3ff3c.js": "/Clubs/precache-manifest.889473a494ac4a14f5ad3579b7d3ff3c.js",
+    "precache-manifest.a18127ed890acc6ec55d51d3731e4b11.js": "/Clubs/precache-manifest.a18127ed890acc6ec55d51d3731e4b11.js",
     "service-worker.js": "/Clubs/service-worker.js",
-    "static/js/2.a2ec5fc2.chunk.js.LICENSE.txt": "/Clubs/static/js/2.a2ec5fc2.chunk.js.LICENSE.txt",
+    "static/js/2.55422d17.chunk.js.LICENSE.txt": "/Clubs/static/js/2.55422d17.chunk.js.LICENSE.txt",
     "static/media/flag-orpheus-top.svg": "/Clubs/static/media/flag-orpheus-top.51675f87.svg",
     "static/media/skn.png": "/Clubs/static/media/skn.946ba1e8.png"
   },
   "entrypoints": [
     "static/js/runtime-main.72eb142b.js",
-    "static/js/2.a2ec5fc2.chunk.js",
-    "static/js/main.2c3e88f0.chunk.js"
+    "static/js/2.55422d17.chunk.js",
+    "static/js/main.e312745f.chunk.js"
   ]
 }
