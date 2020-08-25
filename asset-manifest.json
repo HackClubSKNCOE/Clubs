@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Clubs/static/js/main.6d3786b0.chunk.js",
-    "main.js.map": "/Clubs/static/js/main.6d3786b0.chunk.js.map",
+    "main.js": "/Clubs/static/js/main.a6517df7.chunk.js",
+    "main.js.map": "/Clubs/static/js/main.a6517df7.chunk.js.map",
     "runtime-main.js": "/Clubs/static/js/runtime-main.72eb142b.js",
     "runtime-main.js.map": "/Clubs/static/js/runtime-main.72eb142b.js.map",
     "static/js/2.55422d17.chunk.js": "/Clubs/static/js/2.55422d17.chunk.js",
     "static/js/2.55422d17.chunk.js.map": "/Clubs/static/js/2.55422d17.chunk.js.map",
     "index.html": "/Clubs/index.html",
-    "precache-manifest.e83bf20a8555d17fcad4b60878b25c63.js": "/Clubs/precache-manifest.e83bf20a8555d17fcad4b60878b25c63.js",
+    "precache-manifest.20628ccf4e55bff7a9c0c62dacf75cc4.js": "/Clubs/precache-manifest.20628ccf4e55bff7a9c0c62dacf75cc4.js",
     "service-worker.js": "/Clubs/service-worker.js",
     "static/js/2.55422d17.chunk.js.LICENSE.txt": "/Clubs/static/js/2.55422d17.chunk.js.LICENSE.txt",
     "static/media/flag-orpheus-top.svg": "/Clubs/static/media/flag-orpheus-top.51675f87.svg",
@@ -16,6 +16,6 @@
   "entrypoints": [
     "static/js/runtime-main.72eb142b.js",
     "static/js/2.55422d17.chunk.js",
-    "static/js/main.6d3786b0.chunk.js"
+    "static/js/main.a6517df7.chunk.js"
   ]
 }
