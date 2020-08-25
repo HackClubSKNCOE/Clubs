@@ -81,7 +81,11 @@ const Footer = () => {
                 children="Hackathons"
               />
               <Link href="https://hackclub.com/bank/" children="Bank" />
-              <Link href="https://hackclub.com/map/" children="Clubs Map" />
+              <Link href="https://hackclub.com/map/" children="Map" />
+              <Link
+                href="https://hackclubskncoe.github.io/Clubs"
+                children="List"
+              />
             </Box>
 
             <Box mt={4} sx={{ gridColumn: ["span 2", "span 1"] }}>
