@@ -8,6 +8,8 @@ import {
   Container,
   Link,
   Button,
+  Flex,
+  Box,
 } from "theme-ui";
 import theme from "@hackclub/theme";
 import Icon from "@hackclub/icons";
@@ -54,19 +56,37 @@ function Cards(props) {
                     {info.country ? `${info.country} ` : "Unknown "}
                   </Text>
                   <br />
-                  <Text variant="caption" sx={{ color: "red" }}>
-                    <Icon glyph="leaders-fill" size={24} />
-                    <br />
-                    {info.leaders ? `${info.leaders} ` : "Hack Clubber "}{" "}
-                  </Text>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row;",
+                      align: "stretch",
+                    }}
+                  >
+                    <div>
+                      <Icon
+                        sx={{ flexShrink: 0, flexBasis: 24, flexGrow: 0 }}
+                        glyph="leaders-fill"
+                        color="red"
+                        size={24}
+                      />
+                    </div>
+                    <Text
+                      variant="caption"
+                      ml={2}
+                      sx={{ color: "red", flexGrow: 1 }}
+                    >
+                      {info.leaders ? `${info.leaders} ` : "Hack Clubber "}{" "}
+                    </Text>
+                  </Box>
                   <br />
                   {info.slackID ? (
-                    <Text variant="caption" sx={{ color: "dark" }}>
+                    <Text variant="caption">
                       <Link
                         target="_blank"
                         rel="noopener noreferrer"
                         color="red"
-                        sx={{ color: "dark" }}
+                        sx={{ color: "#4A154B" }}
                         href={
                           "https://app.slack.com/client/T0266FRGM/" +
                           info.slackID

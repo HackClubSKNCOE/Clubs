@@ -67,7 +67,12 @@ function Header() {
               aria-label="View source code on GitHub"
               sx={{ ml: "auto" }}
             >
-              <a className="mx-2 auto" href="https://github.com/HackClubSKNCOE">
+              <a
+                className="mx-2 auto"
+                href="https://github.com/HackClubSKNCOE/Clubs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-github fa-2x"></i>
               </a>
             </NavButton>

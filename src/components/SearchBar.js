@@ -18,20 +18,20 @@ class SearchBar extends React.Component {
         <ThemeProvider theme={theme}>
           <Container px={[3, null, 4]} mb={5}>
             <Card variant="sunken">
-              <Grid gap={2} columns={[null, 2, 3]}>
-                <div></div>
-                <form onSubmit={this.sendSearchKeyword}>
-                  <Flex>
-                    <Icon glyph="search" size={32} />
+              <div class="columns is-mobile is-vcentered">
+                <div class="column is-narrow">
+                  <Icon glyph="search" size={32} />
+                </div>
+                <div class="column">
+                  <form onSubmit={this.sendSearchKeyword}>
                     <Input
                       name="search"
                       id="search"
                       placeholder="Search Clubs, Leaders or Locations"
-                      sx={{ flex: "1 1 auto" }}
                     ></Input>
-                  </Flex>
-                </form>
-              </Grid>
+                  </form>
+                </div>
+              </div>
             </Card>
           </Container>
         </ThemeProvider>
